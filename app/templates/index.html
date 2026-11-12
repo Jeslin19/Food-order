@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Ordering App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Foodie's Restaurant</h1>
+        <p>Fresh food delivered with love!</p>
+    </header>
+
+    <main>
+        <section class="menu-section">
+            <h2>Our Food Menu</h2>
+            <div id="food-menu" class="food-container">
+                Loading food menu...
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                Your cart is empty.
+            </div>
+
+            <h3>Total: ₹<span id="total">0</span></h3>
+
+            <button onclick="placeOrder()">Place Order</button>
+
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
